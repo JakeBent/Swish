@@ -12,10 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let main = MainTabsViewController();
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        FirebaseService.shared.getGames(dayOffset: 0) { error, results in
+//            print(error)
+//            print(results)
+//            results.forEach { result in
+//                print(result["awayTeamKey"])
+//                print(result["homeTeamKey"])
+//                print("")
+//            }
+//            print(results.count)
+//        }
+        
+        window = UIWindow()
+        window?.rootViewController = main
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
