@@ -18,7 +18,7 @@ class GamesViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.featured, tag: 1)
+        tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
         title = "Games"
     }
     

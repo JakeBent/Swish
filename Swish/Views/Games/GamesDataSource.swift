@@ -17,7 +17,6 @@ class GamesDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDel
     init(didFinishLoading: (() -> Void)?) {
         super.init()
         self.didFinishLoading = didFinishLoading
-        
     }
     
     func refresh() {

@@ -1,16 +1,9 @@
 import UIKit
 
-class BoxScoreView: UIView {
-    
-    let scrollView = UIScrollView()
-    
+class BoxScoreView: UIScrollView {
     init() {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        
-        addSubview(scrollView)
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.pinToEdges(of: self)
     }
     
     func setup() {
@@ -22,17 +15,17 @@ class BoxScoreView: UIView {
             rows.append(row)
         }
         
-        var previousAnchor = scrollView.topAnchor
+        var previousAnchor = topAnchor
         rows.forEach { row in
-            scrollView.addSubview(row)
-            row.pinLeft(to: scrollView.leftAnchor)
-            row.pinRight(to: scrollView.rightAnchor)
+            addSubview(row)
+            row.pinLeft(to: leftAnchor)
+            row.pinRight(to: rightAnchor)
             row.pinTop(to: previousAnchor)
             row.pinHeight(toConstant: 30)
             previousAnchor = row.bottomAnchor
         }
         
-        rows[rows.count - 1].pinBottom(to: scrollView.bottomAnchor)
+        rows[rows.count - 1].pinBottom(to: bottomAnchor)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -73,7 +66,7 @@ class BoxScoreRow: UIView {
         nameLabel.pinLeft(to: leftAnchor, constant: 8)
         nameLabel.pinTop(to: topAnchor)
         nameLabel.pinBottom(to: bottomAnchor)
-        nameLabel.pinWidth(toConstant: 100)
+        nameLabel.pinWidth(greaterThan: 100)
         
         var previousAnchor = nameLabel.rightAnchor
         

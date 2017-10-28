@@ -22,4 +22,14 @@ struct Generators {
         return label
     }
     
+    static func makeImageView(contentMode: UIViewContentMode = .scaleAspectFill) -> UIImageView {
+        let imageView = UIImageView()
+        
+        imageView.contentMode = contentMode
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return imageView
+    }
+    
 }

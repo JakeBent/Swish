@@ -2,16 +2,8 @@ import UIKit
 
 class GameCell: UITableViewCell {
 
-    let homeIcon: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
-    let awayIcon: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
+    let homeIcon = Generators.makeImageView()
+    let awayIcon = Generators.makeImageView()
     let homeNameLabel = Generators.makeLabel(align: .center)
     let awayNameLabel = Generators.makeLabel(align: .center)
     let homeScoreLabel = Generators.makeLabel(fontSize: 20, weight: .bold)

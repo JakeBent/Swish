@@ -2,15 +2,15 @@ import UIKit
 
 class MainTabsViewController: UITabBarController {
 
-    let games = MainNavgiationController(rootViewController: GamesViewController())
-    let games1 = MainNavgiationController(rootViewController: GamesViewController())
-    let games2 = MainNavgiationController(rootViewController: GamesViewController())
-
+    let games = MainNavigationController(rootViewController: GamesViewController())
+    let games1 = MainNavigationController(rootViewController: GamesViewController())
+    let games2 = MainNavigationController(rootViewController: GamesViewController())
+    let standings = MainNavigationController(rootViewController: StandingsViewController())
     
     init() {
         super.init(nibName: nil, bundle: nil)
         
-        viewControllers = [games, games1, games2]
+        viewControllers = [games, games1, games2, standings]
         tabBar.barTintColor = .red
         tabBar.tintColor = .black
     }

@@ -18,6 +18,10 @@ extension UIView {
         rightAnchor.constraint(equalTo: anchor, constant: constant).isActive = isActive
     }
     
+    func pinRight(greaterThan anchor: NSLayoutXAxisAnchor, constant: CGFloat = 0, isActive: Bool = true) {
+        rightAnchor.constraint(greaterThanOrEqualTo: anchor).isActive = isActive
+    }
+    
     func pinTop(to anchor: NSLayoutYAxisAnchor, constant: CGFloat = 0, isActive: Bool = true) {
         topAnchor.constraint(equalTo: anchor, constant: constant).isActive = isActive
     }
@@ -38,8 +42,32 @@ extension UIView {
         heightAnchor.constraint(equalToConstant: constant).isActive = isActive
     }
     
+    func pinHeight(to anchor: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0, isActive: Bool = true) {
+        heightAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant).isActive = isActive
+    }
+    
+    func pinWidth(to anchor: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0, isActive: Bool = true) {
+        widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant).isActive = isActive
+    }
+    
     func pinWidth(toConstant constant: CGFloat, isActive: Bool = true) {
         widthAnchor.constraint(equalToConstant: constant).isActive = isActive
+    }
+    
+    func pinWidth(greaterThan anchor: NSLayoutDimension, isActive: Bool = true) {
+        widthAnchor.constraint(greaterThanOrEqualTo: anchor).isActive = isActive
+    }
+    
+    func pinWidth(lessThan anchor: NSLayoutDimension, isActive: Bool = true) {
+        widthAnchor.constraint(lessThanOrEqualTo: anchor).isActive = isActive
+    }
+    
+    func pinWidth(lessThan constant: CGFloat, isActive: Bool = true) {
+        widthAnchor.constraint(lessThanOrEqualToConstant: constant).isActive = isActive
+    }
+    
+    func pinWidth(greaterThan constant: CGFloat, isActive: Bool = true) {
+        widthAnchor.constraint(greaterThanOrEqualToConstant: constant).isActive = isActive
     }
     
     func addBorder(to edge: UIRectEdge, color: UIColor = .lightGray) {
