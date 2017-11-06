@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1FBE0B8B20325CCB1C0873AF /* Pods_SwishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E395CABE43F9CFB0CA72CA /* Pods_SwishTests.framework */; };
+		9B24252A1FA85B8F00833774 /* RedditCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2425291FA85B8F00833774 /* RedditCommentsView.swift */; };
+		9B24252C1FA85CC400833774 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24252B1FA85CC400833774 /* Comment.swift */; };
+		9B24252E1FA8656800833774 /* RedditService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24252D1FA8656800833774 /* RedditService.swift */; };
+		9B2425301FA8683200833774 /* reddit_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B24252F1FA8677900833774 /* reddit_comments.json */; };
+		9B2425321FA8864200833774 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2425311FA8864200833774 /* CommentView.swift */; };
+		9B2425341FA89DF800833774 /* CommentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2425331FA89DF800833774 /* CommentContainer.swift */; };
 		9B31EC4D1F9F016A0079E653 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC4C1F9F016A0079E653 /* Game.swift */; };
 		9B31EC501F9F0B7C0079E653 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC4F1F9F0B7C0079E653 /* MainNavigationController.swift */; };
 		9B31EC551F9F2BF00079E653 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC541F9F2BF00079E653 /* GamesViewController.swift */; };
@@ -26,6 +32,7 @@
 		9B96C7BE1FA1CC1800DB11C2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7BD1FA1CC1800DB11C2 /* UIFont.swift */; };
 		9B96C7C11FA1D51600DB11C2 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7C01FA1D51600DB11C2 /* SegmentedControl.swift */; };
 		9B96C7C41FA3435A00DB11C2 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7C31FA3435A00DB11C2 /* StandingsViewController.swift */; };
+		9BB1450C1FAA0AC8005585BD /* CommentContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1450B1FAA0AC8005585BD /* CommentContainerCell.swift */; };
 		9BBD83EA1F9E7A2200D1C729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBD83E91F9E7A2200D1C729 /* AppDelegate.swift */; };
 		9BBD83F11F9E7A2200D1C729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBD83F01F9E7A2200D1C729 /* Assets.xcassets */; };
 		9BBD83F41F9E7A2200D1C729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BBD83F21F9E7A2200D1C729 /* LaunchScreen.storyboard */; };
@@ -52,6 +59,12 @@
 		667EC27DA0E3D17BBF1A3BF2 /* Pods-SwishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwishTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwishTests/Pods-SwishTests.release.xcconfig"; sourceTree = "<group>"; };
 		70BB6D411EB04F8E8880F6D4 /* Pods-SwishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwishTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwishTests/Pods-SwishTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99AD86F2E780536124A84278 /* Pods_Swish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B2425291FA85B8F00833774 /* RedditCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditCommentsView.swift; sourceTree = "<group>"; };
+		9B24252B1FA85CC400833774 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9B24252D1FA8656800833774 /* RedditService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditService.swift; sourceTree = "<group>"; };
+		9B24252F1FA8677900833774 /* reddit_comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reddit_comments.json; sourceTree = "<group>"; };
+		9B2425311FA8864200833774 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		9B2425331FA89DF800833774 /* CommentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentContainer.swift; sourceTree = "<group>"; };
 		9B31EC4C1F9F016A0079E653 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9B31EC4F1F9F0B7C0079E653 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		9B31EC541F9F2BF00079E653 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +83,7 @@
 		9B96C7BD1FA1CC1800DB11C2 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		9B96C7C01FA1D51600DB11C2 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		9B96C7C31FA3435A00DB11C2 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
+		9BB1450B1FAA0AC8005585BD /* CommentContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentContainerCell.swift; sourceTree = "<group>"; };
 		9BBD83E61F9E7A2100D1C729 /* Swish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBD83E91F9E7A2200D1C729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBD83F01F9E7A2200D1C729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,10 +129,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9B2425281FA85B5A00833774 /* Reddit */ = {
+			isa = PBXGroup;
+			children = (
+				9B2425291FA85B8F00833774 /* RedditCommentsView.swift */,
+				9B2425311FA8864200833774 /* CommentView.swift */,
+				9B2425331FA89DF800833774 /* CommentContainer.swift */,
+				9BB1450B1FAA0AC8005585BD /* CommentContainerCell.swift */,
+			);
+			path = Reddit;
+			sourceTree = "<group>";
+		};
 		9B31EC4B1F9F01510079E653 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9B31EC4C1F9F016A0079E653 /* Game.swift */,
+				9B24252B1FA85CC400833774 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +197,7 @@
 		9B96C7BF1FA1D4FA00DB11C2 /* Aux */ = {
 			isa = PBXGroup;
 			children = (
+				9B2425281FA85B5A00833774 /* Reddit */,
 				9B96C7C01FA1D51600DB11C2 /* SegmentedControl.swift */,
 			);
 			path = Aux;
@@ -232,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				9BBD840E1F9E804800D1C729 /* FirebaseService.swift */,
+				9B24252D1FA8656800833774 /* RedditService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -244,6 +272,7 @@
 				9BBD84111F9E828D00D1C729 /* Errors.swift */,
 				9B96C7B01F9F9FCD00DB11C2 /* Generators.swift */,
 				9B96C7BB1FA0A51600DB11C2 /* Utility.swift */,
+				9B24252F1FA8677900833774 /* reddit_comments.json */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -348,6 +377,7 @@
 			files = (
 				9BBD83F41F9E7A2200D1C729 /* LaunchScreen.storyboard in Resources */,
 				9BBD83F11F9E7A2200D1C729 /* Assets.xcassets in Resources */,
+				9B2425301FA8683200833774 /* reddit_comments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,12 +414,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Swish/Pods-Swish-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/reddift/reddift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/reddift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -480,14 +508,20 @@
 				9B31EC621F9F55660079E653 /* UICollectionView.swift in Sources */,
 				9B96C7BE1FA1CC1800DB11C2 /* UIFont.swift in Sources */,
 				9B31EC601F9F54C10079E653 /* GamesView.swift in Sources */,
+				9B24252E1FA8656800833774 /* RedditService.swift in Sources */,
 				9B31EC571F9F2CFB0079E653 /* MainTabsViewController.swift in Sources */,
 				9BBD840F1F9E804800D1C729 /* FirebaseService.swift in Sources */,
+				9B2425321FA8864200833774 /* CommentView.swift in Sources */,
 				9B31EC5C1F9F54280079E653 /* GamesViewDataSource.swift in Sources */,
 				9B96C7B51F9FA8CE00DB11C2 /* GamesDataSource.swift in Sources */,
 				9B96C7B81FA0A24C00DB11C2 /* GameDetailViewController.swift in Sources */,
 				9B31EC5A1F9F53170079E653 /* UIView.swift in Sources */,
+				9B24252A1FA85B8F00833774 /* RedditCommentsView.swift in Sources */,
 				9B96C7C11FA1D51600DB11C2 /* SegmentedControl.swift in Sources */,
+				9B24252C1FA85CC400833774 /* Comment.swift in Sources */,
 				9BBD840D1F9E7FDE00D1C729 /* Constants.swift in Sources */,
+				9BB1450C1FAA0AC8005585BD /* CommentContainerCell.swift in Sources */,
+				9B2425341FA89DF800833774 /* CommentContainer.swift in Sources */,
 				9B96C7BA1FA0A26300DB11C2 /* BoxScoreView.swift in Sources */,
 				9B31EC641F9F56670079E653 /* UITableView.swift in Sources */,
 				9B96C7B11F9F9FCD00DB11C2 /* Generators.swift in Sources */,

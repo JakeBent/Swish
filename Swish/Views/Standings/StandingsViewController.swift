@@ -76,6 +76,7 @@ class StandingsView: UITableView {
         super.init(frame: .zero, style: .plain)
         
         translatesAutoresizingMaskIntoConstraints = false
+        separatorInset = .zero
         allowsSelection = false
         register(cellClass: StandingsCell.self)
     }

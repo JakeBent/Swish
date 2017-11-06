@@ -2,6 +2,24 @@ import UIKit
 
 extension UIView {
     
+    func removeSubview(_ view: UIView?) {
+        guard let view = view else { return }
+        
+        for constraint in constraints {
+            if let first = constraint.firstItem as? UIView {
+                if first == view {
+                    removeConstraint(constraint)
+                }
+            }
+            if let second = constraint.secondItem as? UIView {
+                if second == view {
+                    removeConstraint(constraint)
+                }
+            }
+        }
+        view.removeFromSuperview()
+    }
+    
     func pinToEdges(of superview: UIView, topOffset: CGFloat = 0, leftOffset: CGFloat = 0, bottomOffset: CGFloat = 0, rightOffset: CGFloat = 0) {
         
         topAnchor.constraint(equalTo: superview.topAnchor, constant: topOffset).isActive = true

@@ -1,5 +1,5 @@
 import UIKit
 
 enum Errors: Error {
-    case badData
+    case badData, jsonError
 }

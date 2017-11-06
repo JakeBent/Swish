@@ -1,11 +1,3 @@
-//
-//  GamesDataSource.swift
-//  Swish
-//
-//  Created by Jacob Benton on 10/24/17.
-//  Copyright © 2017 Jacob Benton. All rights reserved.
-//
-
 import UIKit
 
 class GamesDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

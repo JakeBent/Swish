@@ -1,17 +1,12 @@
 PODS:
   - Alamofire (4.5.0)
-  - reddift (2.0.1):
-    - reddift/MiniKeychain (= 2.0.1)
-  - reddift/MiniKeychain (2.0.1)
 
 DEPENDENCIES:
   - Alamofire
-  - reddift
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  reddift: c6dc41a76657a9ca5c07f55a8e8ad6440f3635a9
 
-PODFILE CHECKSUM: 52da610b6c4c3fe3f3d0e2c68c1ce1edfa0e4f6f
+PODFILE CHECKSUM: 38010bb1a665f54a89a41ce01fc8a883a52f08f2
 
 COCOAPODS: 1.3.1

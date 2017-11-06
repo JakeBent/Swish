@@ -4,43 +4,60 @@ class GameDetailViewController: UIViewController {
 
     let segmentedControl = SegmentedControl(titles: ["Live", "Box Score", "Post"])
     let boxScore = BoxScoreView()
+    let liveRedditView = RedditCommentsView()
+    
+    var views: [UIView] {
+        return [segmentedControl, boxScore, liveRedditView]
+    }
     
     init() {
         super.init(nibName: nil, bundle: nil)
         
         title = "ATL @ ATL"
         view.backgroundColor = .white
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addSubview(segmentedControl)
+        views.forEach { view.addSubview($0) }
+        
         segmentedControl.pinTop(to: view.topAnchor, constant: 8)
         segmentedControl.pinLeft(to: view.leftAnchor, constant: 8)
         segmentedControl.pinRight(to: view.rightAnchor, constant: -8)
         segmentedControl.pinHeight(toConstant: 24)
         
-        boxScore.setup()
-        view.addSubview(boxScore)
         boxScore.pinTop(to: segmentedControl.bottomAnchor, constant: 8)
         boxScore.pinLeft(to: view.leftAnchor)
         boxScore.pinRight(to: view.rightAnchor)
         boxScore.pinBottom(to: view.bottomAnchor)
+
+        liveRedditView.pinTop(to: segmentedControl.bottomAnchor, constant: 8)
+        liveRedditView.pinLeft(to: view.leftAnchor)
+        liveRedditView.pinRight(to: view.rightAnchor)
+        liveRedditView.pinBottom(to: view.bottomAnchor)
+        
+        boxScore.isHidden = false
+        liveRedditView.isHidden = true
         
         segmentedControl.selectedSegmentIndex = 1
         segmentedControl.addTarget(self, action: #selector(selectionChanged), for: .valueChanged)
+        
+        boxScore.setup()
+        liveRedditView.refresh()
     }
     
     @objc func selectionChanged() {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             boxScore.isHidden = true
+            liveRedditView.isHidden = false
         case 1:
             boxScore.isHidden = false
+            liveRedditView.isHidden = true
         case 2:
             boxScore.isHidden = true
+            liveRedditView.isHidden = true
         default: break
         }
     }

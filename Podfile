@@ -6,7 +6,6 @@ target 'Swish' do
   use_frameworks!
 
   pod 'Alamofire'
-  pod 'reddift'
 
   target 'SwishTests' do
     inherit! :search_paths
