@@ -1,7 +1,6 @@
 import UIKit
 
 extension UIView {
-    
     func removeSubview(_ view: UIView?) {
         guard let view = view else { return }
         
@@ -86,6 +85,16 @@ extension UIView {
     
     func pinWidth(greaterThan constant: CGFloat, isActive: Bool = true) {
         widthAnchor.constraint(greaterThanOrEqualToConstant: constant).isActive = isActive
+    }
+    
+    func addOutline(color: UIColor = .lightGray, thickness: CGFloat = 1) {
+        layer.borderWidth = thickness
+        layer.borderColor = color.cgColor
+    }
+    
+    func removeOutline() {
+        layer.borderWidth = 0
+        layer.borderColor = UIColor.clear.cgColor
     }
     
     func addBorder(to edge: UIRectEdge, color: UIColor = .lightGray) {

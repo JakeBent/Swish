@@ -6,13 +6,15 @@ enum FontWeight {
 
 struct Generators {
     
-    static func makeLabel(fontSize: CGFloat = 14, align: NSTextAlignment = .left, weight: FontWeight = .normal, numberOfLines: Int = 1, color: UIColor = .black) -> UILabel {
+    static func makeLabel(fontSize: CGFloat = 14, align: NSTextAlignment = .left, weight: FontWeight = .normal, numberOfLines: Int = 1, color: UIColor = .black, text: String? = nil, bgColor: UIColor = .clear) -> UILabel {
         let label = UILabel()
         
         label.textAlignment = align
         label.numberOfLines = numberOfLines
-        label.lineBreakMode = .byWordWrapping
+        label.lineBreakMode = .byTruncatingTail
         label.textColor = color
+        label.text = text
+        label.backgroundColor = bgColor
         
         switch weight {
         case .normal:
@@ -26,7 +28,7 @@ struct Generators {
         return label
     }
     
-    static func makeImageView(contentMode: UIViewContentMode = .scaleAspectFill, image: UIImage? = nil, renderingMode: UIImageRenderingMode = .alwaysOriginal, tintColor: UIColor = .red, rotation: CGFloat = 0) -> UIImageView {
+    static func makeImageView(contentMode: UIView.ContentMode = .scaleAspectFill, image: UIImage? = nil, renderingMode: UIImage.RenderingMode = .alwaysOriginal, tintColor: UIColor = .red, rotation: CGFloat = 0) -> UIImageView {
         let imageView = UIImageView()
         
         imageView.contentMode = contentMode
@@ -52,4 +54,15 @@ struct Generators {
         return button
     }
     
+    static func makeStack(direction: NSLayoutConstraint.Axis = .vertical) -> UIStackView {
+        let stack = UIStackView()
+        
+        stack.axis = .vertical
+        stack.distribution = .equalCentering
+        stack.alignment = .center
+        
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stack
+    }
 }

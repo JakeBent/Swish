@@ -44,7 +44,6 @@ class RedditCommentsDataSource: NSObject, UITableViewDataSource {
     func refresh() {
         RedditService.shared.fetchComments(path: "") { [weak self] err, comments in
             self?.comments = comments
-            print(err, comments.count)
             self?.didFinishLoading?()
         }
     }

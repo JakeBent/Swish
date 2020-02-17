@@ -3,8 +3,8 @@ import UIKit
 class MainTabsViewController: UITabBarController {
 
     let games = MainNavigationController(rootViewController: GamesViewController())
-    let games1 = MainNavigationController(rootViewController: GamesViewController())
-    let games2 = MainNavigationController(rootViewController: GamesViewController())
+    let games1 = MainNavigationController(rootViewController: StandingsViewController())
+    let games2 = MainNavigationController(rootViewController: StandingsViewController())
     let standings = MainNavigationController(rootViewController: StandingsViewController())
     
     init() {

@@ -47,7 +47,7 @@ class Comment: NSObject {
             let commentsJson = commentsData["children"] as? [[String: Any]]
             else { return [] }
         
-        return commentsJson.flatMap { create(fromJson: $0) }
+        return commentsJson.compactMap { create(fromJson: $0) }
     }
     
     static func create(fromJson json: [String: Any?]?) -> Comment? {
@@ -65,7 +65,7 @@ class Comment: NSObject {
             let repliesData = repliesObj["data"] as? [String: Any?],
             let repliesArr = repliesData["children"] as? [[String: Any?]] {
         
-            replies = repliesArr.flatMap { create(fromJson: $0) }
+            replies = repliesArr.compactMap { create(fromJson: $0) }
         }
         
         return Comment(

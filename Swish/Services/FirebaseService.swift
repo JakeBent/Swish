@@ -25,7 +25,7 @@ class FirebaseService: NSObject {
             "endAt": endDay.timeIntervalSince1970
         ]
         
-        request("\(Constants.url.firebase)/games/2017-18/.json", parameters: params).responseJSON { response in
+        request("\(Constants.urls.firebase)/games/2017-18/.json", parameters: params).responseJSON { response in
             guard let resultDict = response.value as? [String: [String: Any]],
                 response.error == nil else {
                 done(response.error ?? Errors.badData, [])

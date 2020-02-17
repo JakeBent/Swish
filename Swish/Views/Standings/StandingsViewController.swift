@@ -128,7 +128,7 @@ class StandingsCell: UITableViewCell {
         return [icon, nameLabel, recordLabel]
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         views.forEach { contentView.addSubview($0) }
@@ -152,7 +152,7 @@ class StandingsCell: UITableViewCell {
         nameLabel.text = nil
         recordLabel.text = nil
         
-        icon.image = #imageLiteral(resourceName: "hawks_logo")
+        icon.image = #imageLiteral(resourceName: "GSW_logo")
         nameLabel.text = conference == .east ? "Atlanta Hawks" : "Denver Nuggets"
         recordLabel.text = "41-41"
         

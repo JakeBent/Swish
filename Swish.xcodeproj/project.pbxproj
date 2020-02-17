@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1FBE0B8B20325CCB1C0873AF /* Pods_SwishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E395CABE43F9CFB0CA72CA /* Pods_SwishTests.framework */; };
+		9B0DB74223F4B23B0000DA32 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74123F4B23B0000DA32 /* Team.swift */; };
+		9B0DB74423F4DC570000DA32 /* CutoutTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74323F4DC570000DA32 /* CutoutTabHeader.swift */; };
+		9B0DB74623F4DC5E0000DA32 /* CutoutTabHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74523F4DC5E0000DA32 /* CutoutTabHeaderCell.swift */; };
+		9B0DB74823F4DC690000DA32 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74723F4DC690000DA32 /* Layout.swift */; };
+		9B0DB74A23F4DC730000DA32 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74923F4DC730000DA32 /* Numbers.swift */; };
+		9B0DB74C23F4DC850000DA32 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74B23F4DC850000DA32 /* UIColor.swift */; };
 		9B24252A1FA85B8F00833774 /* RedditCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2425291FA85B8F00833774 /* RedditCommentsView.swift */; };
 		9B24252C1FA85CC400833774 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24252B1FA85CC400833774 /* Comment.swift */; };
 		9B24252E1FA8656800833774 /* RedditService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24252D1FA8656800833774 /* RedditService.swift */; };
@@ -24,6 +30,10 @@
 		9B31EC601F9F54C10079E653 /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC5F1F9F54C10079E653 /* GamesView.swift */; };
 		9B31EC621F9F55660079E653 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC611F9F55660079E653 /* UICollectionView.swift */; };
 		9B31EC641F9F56670079E653 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC631F9F56670079E653 /* UITableView.swift */; };
+		9B464AD623F611F500624398 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B464AD523F611F500624398 /* UIViewController.swift */; };
+		9B464AD823F6314C00624398 /* Boxscore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B464AD723F6314C00624398 /* Boxscore.swift */; };
+		9B464ADA23FA923D00624398 /* GameDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B464AD923FA923D00624398 /* GameDetailDataSource.swift */; };
+		9B87F2E623F46BF500CB63CB /* NBAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B87F2E523F46BF500CB63CB /* NBAService.swift */; };
 		9B96C7B11F9F9FCD00DB11C2 /* Generators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7B01F9F9FCD00DB11C2 /* Generators.swift */; };
 		9B96C7B51F9FA8CE00DB11C2 /* GamesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7B41F9FA8CE00DB11C2 /* GamesDataSource.swift */; };
 		9B96C7B81FA0A24C00DB11C2 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7B71FA0A24C00DB11C2 /* GameDetailViewController.swift */; };
@@ -59,6 +69,12 @@
 		667EC27DA0E3D17BBF1A3BF2 /* Pods-SwishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwishTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwishTests/Pods-SwishTests.release.xcconfig"; sourceTree = "<group>"; };
 		70BB6D411EB04F8E8880F6D4 /* Pods-SwishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwishTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwishTests/Pods-SwishTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99AD86F2E780536124A84278 /* Pods_Swish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0DB74123F4B23B0000DA32 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		9B0DB74323F4DC570000DA32 /* CutoutTabHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutoutTabHeader.swift; sourceTree = "<group>"; };
+		9B0DB74523F4DC5E0000DA32 /* CutoutTabHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutoutTabHeaderCell.swift; sourceTree = "<group>"; };
+		9B0DB74723F4DC690000DA32 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		9B0DB74923F4DC730000DA32 /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		9B0DB74B23F4DC850000DA32 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9B2425291FA85B8F00833774 /* RedditCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditCommentsView.swift; sourceTree = "<group>"; };
 		9B24252B1FA85CC400833774 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9B24252D1FA8656800833774 /* RedditService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditService.swift; sourceTree = "<group>"; };
@@ -75,6 +91,10 @@
 		9B31EC5F1F9F54C10079E653 /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
 		9B31EC611F9F55660079E653 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		9B31EC631F9F56670079E653 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		9B464AD523F611F500624398 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9B464AD723F6314C00624398 /* Boxscore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boxscore.swift; sourceTree = "<group>"; };
+		9B464AD923FA923D00624398 /* GameDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailDataSource.swift; sourceTree = "<group>"; };
+		9B87F2E523F46BF500CB63CB /* NBAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAService.swift; sourceTree = "<group>"; };
 		9B96C7B01F9F9FCD00DB11C2 /* Generators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generators.swift; sourceTree = "<group>"; };
 		9B96C7B41F9FA8CE00DB11C2 /* GamesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDataSource.swift; sourceTree = "<group>"; };
 		9B96C7B71FA0A24C00DB11C2 /* GameDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +165,8 @@
 			children = (
 				9B31EC4C1F9F016A0079E653 /* Game.swift */,
 				9B24252B1FA85CC400833774 /* Comment.swift */,
+				9B0DB74123F4B23B0000DA32 /* Team.swift */,
+				9B464AD723F6314C00624398 /* Boxscore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,10 +199,13 @@
 		9B31EC581F9F530C0079E653 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9B0DB74B23F4DC850000DA32 /* UIColor.swift */,
 				9B31EC591F9F53170079E653 /* UIView.swift */,
 				9B31EC611F9F55660079E653 /* UICollectionView.swift */,
 				9B96C7BD1FA1CC1800DB11C2 /* UIFont.swift */,
 				9B31EC631F9F56670079E653 /* UITableView.swift */,
+				9B0DB74923F4DC730000DA32 /* Numbers.swift */,
+				9B464AD523F611F500624398 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				9B96C7B71FA0A24C00DB11C2 /* GameDetailViewController.swift */,
+				9B464AD923FA923D00624398 /* GameDetailDataSource.swift */,
 				9B96C7B91FA0A26300DB11C2 /* BoxScoreView.swift */,
 			);
 			path = Detail;
@@ -197,6 +223,8 @@
 		9B96C7BF1FA1D4FA00DB11C2 /* Aux */ = {
 			isa = PBXGroup;
 			children = (
+				9B0DB74323F4DC570000DA32 /* CutoutTabHeader.swift */,
+				9B0DB74523F4DC5E0000DA32 /* CutoutTabHeaderCell.swift */,
 				9B2425281FA85B5A00833774 /* Reddit */,
 				9B96C7C01FA1D51600DB11C2 /* SegmentedControl.swift */,
 			);
@@ -259,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				9BBD840E1F9E804800D1C729 /* FirebaseService.swift */,
+				9B87F2E523F46BF500CB63CB /* NBAService.swift */,
 				9B24252D1FA8656800833774 /* RedditService.swift */,
 			);
 			path = Services;
@@ -272,6 +301,7 @@
 				9BBD84111F9E828D00D1C729 /* Errors.swift */,
 				9B96C7B01F9F9FCD00DB11C2 /* Generators.swift */,
 				9B96C7BB1FA0A51600DB11C2 /* Utility.swift */,
+				9B0DB74723F4DC690000DA32 /* Layout.swift */,
 				9B24252F1FA8677900833774 /* reddit_comments.json */,
 			);
 			path = "Supporting Files";
@@ -298,7 +328,6 @@
 				9BBD83E31F9E7A2100D1C729 /* Frameworks */,
 				9BBD83E41F9E7A2100D1C729 /* Resources */,
 				1107943EAE28F48C811007F4 /* [CP] Embed Pods Frameworks */,
-				98369D41199D97E5E8980F68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,8 +346,6 @@
 				9BBD83F61F9E7A2200D1C729 /* Sources */,
 				9BBD83F71F9E7A2200D1C729 /* Frameworks */,
 				9BBD83F81F9E7A2200D1C729 /* Resources */,
-				0317C4C5099F53331E75216F /* [CP] Embed Pods Frameworks */,
-				2FD64441648C5D782FC3E94D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,15 +364,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Jacob Benton";
 				TargetAttributes = {
 					9BBD83E51F9E7A2100D1C729 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 					9BBD83F91F9E7A2200D1C729 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9BBD83E51F9E7A2100D1C729;
 					};
@@ -391,37 +420,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0317C4C5099F53331E75216F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwishTests/Pods-SwishTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1107943EAE28F48C811007F4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Swish/Pods-Swish-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Swish/Pods-Swish-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swish/Pods-Swish-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swish/Pods-Swish-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1628CA79A359E7589A8FBA9F /* [CP] Check Pods Manifest.lock */ = {
@@ -442,21 +458,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2FD64441648C5D782FC3E94D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwishTests/Pods-SwishTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		372B7BE38D14B79BEA298787 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,21 +476,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98369D41199D97E5E8980F68 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swish/Pods-Swish-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -499,13 +485,16 @@
 			files = (
 				9B31EC551F9F2BF00079E653 /* GamesViewController.swift in Sources */,
 				9BBD84131F9E845D00D1C729 /* Errors.swift in Sources */,
+				9B464AD623F611F500624398 /* UIViewController.swift in Sources */,
 				9B31EC4D1F9F016A0079E653 /* Game.swift in Sources */,
 				9B31EC5E1F9F548C0079E653 /* GameCell.swift in Sources */,
 				9BBD83EA1F9E7A2200D1C729 /* AppDelegate.swift in Sources */,
 				9B31EC501F9F0B7C0079E653 /* MainNavigationController.swift in Sources */,
+				9B0DB74423F4DC570000DA32 /* CutoutTabHeader.swift in Sources */,
 				9B96C7C41FA3435A00DB11C2 /* StandingsViewController.swift in Sources */,
 				9B96C7BC1FA0A51600DB11C2 /* Utility.swift in Sources */,
 				9B31EC621F9F55660079E653 /* UICollectionView.swift in Sources */,
+				9B0DB74A23F4DC730000DA32 /* Numbers.swift in Sources */,
 				9B96C7BE1FA1CC1800DB11C2 /* UIFont.swift in Sources */,
 				9B31EC601F9F54C10079E653 /* GamesView.swift in Sources */,
 				9B24252E1FA8656800833774 /* RedditService.swift in Sources */,
@@ -515,16 +504,23 @@
 				9B31EC5C1F9F54280079E653 /* GamesViewDataSource.swift in Sources */,
 				9B96C7B51F9FA8CE00DB11C2 /* GamesDataSource.swift in Sources */,
 				9B96C7B81FA0A24C00DB11C2 /* GameDetailViewController.swift in Sources */,
+				9B0DB74223F4B23B0000DA32 /* Team.swift in Sources */,
 				9B31EC5A1F9F53170079E653 /* UIView.swift in Sources */,
 				9B24252A1FA85B8F00833774 /* RedditCommentsView.swift in Sources */,
 				9B96C7C11FA1D51600DB11C2 /* SegmentedControl.swift in Sources */,
 				9B24252C1FA85CC400833774 /* Comment.swift in Sources */,
+				9B0DB74623F4DC5E0000DA32 /* CutoutTabHeaderCell.swift in Sources */,
 				9BBD840D1F9E7FDE00D1C729 /* Constants.swift in Sources */,
 				9BB1450C1FAA0AC8005585BD /* CommentContainerCell.swift in Sources */,
 				9B2425341FA89DF800833774 /* CommentContainer.swift in Sources */,
+				9B464AD823F6314C00624398 /* Boxscore.swift in Sources */,
+				9B0DB74C23F4DC850000DA32 /* UIColor.swift in Sources */,
+				9B87F2E623F46BF500CB63CB /* NBAService.swift in Sources */,
+				9B0DB74823F4DC690000DA32 /* Layout.swift in Sources */,
 				9B96C7BA1FA0A26300DB11C2 /* BoxScoreView.swift in Sources */,
 				9B31EC641F9F56670079E653 /* UITableView.swift in Sources */,
 				9B96C7B11F9F9FCD00DB11C2 /* Generators.swift in Sources */,
+				9B464ADA23FA923D00624398 /* GameDetailDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +568,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -579,6 +576,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -629,6 +627,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -636,6 +635,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -671,11 +671,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PJEH8E59D;
 				INFOPLIST_FILE = Swish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakebent.Swish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -686,11 +687,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PJEH8E59D;
 				INFOPLIST_FILE = Swish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakebent.Swish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -706,7 +708,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakebent.SwishTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swish.app/Swish";
 			};
@@ -723,7 +725,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakebent.SwishTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swish.app/Swish";
 			};

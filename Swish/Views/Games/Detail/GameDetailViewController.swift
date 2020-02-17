@@ -2,18 +2,21 @@ import UIKit
 
 class GameDetailViewController: UIViewController {
 
-    let segmentedControl = SegmentedControl(titles: ["Live", "Box Score", "Post"])
+    let segmentedControl = SegmentedControl(titles: ["Live", "Game Details", "Box Score", "Post"])
     let boxScore = BoxScoreView()
     let liveRedditView = RedditCommentsView()
-    
     var views: [UIView] {
         return [segmentedControl, boxScore, liveRedditView]
     }
     
-    init() {
+    let game: Game
+    var dataSource: GameDetailDataSource?
+    
+    init(game: Game) {
+        self.game = game
         super.init(nibName: nil, bundle: nil)
         
-        title = "ATL @ ATL"
+        title = "\(game.awayTeam.abbreviation) @ \(game.homeTeam.abbreviation)"
         view.backgroundColor = .white
     }
     
@@ -43,7 +46,12 @@ class GameDetailViewController: UIViewController {
         segmentedControl.selectedSegmentIndex = 1
         segmentedControl.addTarget(self, action: #selector(selectionChanged), for: .valueChanged)
         
-        boxScore.setup()
+        setLoading(true)
+        
+        dataSource = GameDetailDataSource(self, boxScoreView: boxScore, game: game) { [weak self] in
+            self?.setLoading(false)
+        }
+        
         liveRedditView.refresh()
     }
     
