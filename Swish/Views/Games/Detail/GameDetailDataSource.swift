@@ -12,23 +12,28 @@ class GameDetailDataSource: NSObject {
 
     var boxscore: Boxscore? {
         didSet {
-            boxScoreView?.setup(with: boxscore)
+            parent?.boxScore.setup(with: boxscore)
+            parent?.gameCell.setup(withBoxscore: boxscore)
+            parent?.scoringOverview.setup(with: boxscore)
+            parent?.playByPlay.setup(with: boxscore)
+            let animations = parent?.teamComparison.setup(with: boxscore)
+            parent?.exec(animations: animations ?? [])
         }
     }
     
     let game: Game
-    weak var boxScoreView: BoxScoreView?
     weak var parent: GameDetailViewController?
     var didFinishLoading: (() -> Void)?
     
-    init(_ parent: GameDetailViewController, boxScoreView: BoxScoreView, game: Game, didFinishLoading: (() -> Void)?) {
+    init(_ parent: GameDetailViewController, game: Game, didFinishLoading: (() -> Void)?) {
         self.parent = parent
         self.game = game
-        self.boxScoreView = boxScoreView
         self.didFinishLoading = didFinishLoading
         super.init()
         
-        NBAService.shared.getBoxscore(id: game.id) { [weak self] err, boxScore in
+        NBAService.shared.getBoxscore(id: game.id, progress: { progress in
+            self.parent?.view.setProgress(progress)
+        }) { [weak self] err, boxScore in
             self?.boxscore = boxScore
             
             self?.didFinishLoading?()

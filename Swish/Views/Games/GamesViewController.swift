@@ -46,10 +46,10 @@ class GamesViewController: UIViewController {
         collectionView.pinRight(to: view.rightAnchor)
         collectionView.pinBottom(to: view.bottomAnchor)
         
-        setLoading(true)
+        view.setLoading(true)
         
         dataSource = GamesDataSource(self, header: header, collectionView: collectionView) { [weak self] in
-            self?.setLoading(false)
+            self?.view.setLoading(false)
             self?.dataSource?.data.forEach { dataSource in
                 dataSource.tapAction = { indexPath in
                     let game = dataSource.games[indexPath.row]

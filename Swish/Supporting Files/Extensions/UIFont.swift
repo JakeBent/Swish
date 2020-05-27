@@ -8,4 +8,8 @@ extension UIFont {
     static func mainBold(fontSize: CGFloat) -> UIFont {
         return .boldSystemFont(ofSize: fontSize)
     }
+    
+    static func mainHeavy(fontSize: CGFloat) -> UIFont {
+        return .systemFont(ofSize: fontSize, weight: .heavy)
+    }
 }

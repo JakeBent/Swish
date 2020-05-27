@@ -33,6 +33,21 @@ struct Boxscore {
         return playedStatus == "COMPLETED"
     }
     
+    var isLive: Bool {
+        return playedStatus == "LIVE"
+    }
+    
+    var previewStatus: String {
+        if isComplete {
+            switch quarters.count {
+            case 0..<5: return "Final"
+            default: return "Final/\(quarters.count == 5 ? "" : "\(quarters.count - 4)")OT"
+            }
+        }
+        
+        return Utility.timeString(from: startTime)
+    }
+    
     static func create(fromJson json: [String: Any]?) -> Boxscore? {
         guard let game = json?["game"] as? [String: Any?],
             let score = json?["scoring"] as? [String: Any?],
@@ -84,41 +99,68 @@ struct Boxscore {
 
 struct GameStats {
     let fgAtt: Int
+    let fgAttPerGame: Double?
     let fgMade: Int
+    let fgMadePerGame: Double?
     let fgPct: Double
     let fg2PtAtt: Int
+    let fg2PtAttPerGame: Double?
     let fg2PtMade: Int
+    let fg2PtMadePerGame: Double?
     let fg2PtPct: Double
     let fg3PtAtt: Int
+    let fg3PtAttPerGame: Double?
     let fg3PtMade: Int
+    let fg3PtMadePerGame: Double?
     let fg3PtPct: Double
     let ftAtt: Int
+    let ftAttPerGame: Double?
     let ftMade: Int
+    let ftMadePerGame: Double?
     let ftPct: Double
     let offReb: Int
+    let offRebPerGame: Double?
     let defReb: Int
+    let defRebPerGame: Double?
     let reb: Int
+    let rebPerGame: Double?
     let ast: Int
+    let astPerGame: Double?
     let pts: Int
+    let ptsPerGame: Double?
     let tov: Int
+    let tovPerGame: Double?
     let stl: Int
+    let stlPerGame: Double?
     let blk: Int
+    let blkPerGame: Double?
     let blkAgainst: Int
+    let blkAgainstPerGame: Double?
     let ptsAgainst: Int?
+    let ptsAgainstPerGame: Double?
     let fouls: Int
+    let foulsPerGame: Double?
     let foulsDrawn: Int
+    let foulsDrawnPerGame: Double?
+    let foulPers: Int?
+    let foulPersPerGame: Double?
+    let foulTech: Int?
+    let foulTechPerGame: Double?
+    let foulTechDrawn: Int?
+    let foulTechDrawnPerGame: Double?
     let ejections: Int
     let plusMinus: Int
+    let plusMinusPerGame: Double?
     let minSeconds: Int?
     let gamesStarted: Int?
     
     static func create(fromJson json: [String: Any]?) -> GameStats? {
         guard let fg = json?["fieldGoals"] as? [String: Any],
             let ft = json?["freeThrows"] as? [String: Any],
-            let rb = json?["rebounds"] as? [String: Int],
-            let off = json?["offense"] as? [String: Int],
-            let def = json?["defense"] as? [String: Int],
-            let misc = json?["miscellaneous"] as? [String: Int],
+            let rb = json?["rebounds"] as? [String: Any],
+            let off = json?["offense"] as? [String: Any],
+            let def = json?["defense"] as? [String: Any],
+            let misc = json?["miscellaneous"] as? [String: Any],
             let fgAtt = fg["fgAtt"] as? Int,
             let fgMade = fg["fgMade"] as? Int,
             let fgPct = fg["fgPct"] as? Double,
@@ -131,50 +173,77 @@ struct GameStats {
             let ftAtt = ft["ftAtt"] as? Int,
             let ftMade = ft["ftMade"] as? Int,
             let ftPct = ft["ftPct"] as? Double,
-            let offReb = rb["offReb"],
-            let defReb = rb["defReb"],
-            let reb = rb["reb"],
-            let ast = off["ast"],
-            let pts = off["pts"],
-            let tov = def["tov"],
-            let stl = def["stl"],
-            let blk = def["blk"],
-            let blkAgainst = def["blkAgainst"],
-            let fouls = misc["fouls"],
-            let foulsDrawn = misc["foulsDrawn"],
-            let ejections = misc["ejections"],
-            let plusMinus = misc["plusMinus"]
+            let offReb = rb["offReb"] as? Int,
+            let defReb = rb["defReb"] as? Int,
+            let reb = rb["reb"] as? Int,
+            let ast = off["ast"] as? Int,
+            let pts = off["pts"] as? Int,
+            let tov = def["tov"] as? Int,
+            let stl = def["stl"] as? Int,
+            let blk = def["blk"] as? Int,
+            let blkAgainst = def["blkAgainst"] as? Int,
+            let fouls = misc["fouls"] as? Int,
+            let foulsDrawn = misc["foulsDrawn"] as? Int,
+            let ejections = misc["ejections"] as? Int,
+            let plusMinus = misc["plusMinus"] as? Int
             else { return nil }
         
         return GameStats(
             fgAtt: fgAtt,
+            fgAttPerGame: fg["fgAttPerGame"] as? Double,
             fgMade: fgMade,
+            fgMadePerGame: fg["fgMadePerGame"] as? Double,
             fgPct: fgPct,
             fg2PtAtt: fg2PtAtt,
+            fg2PtAttPerGame: fg["fg2PtAttPerGame"] as? Double,
             fg2PtMade: fg2PtMade,
+            fg2PtMadePerGame: fg["fg2PtMadePerGame"] as? Double,
             fg2PtPct: fg2PtPct,
             fg3PtAtt: fg3PtAtt,
+            fg3PtAttPerGame: fg["fg3PtAttPerGame"] as? Double,
             fg3PtMade: fg3PtMade,
+            fg3PtMadePerGame: fg["fg3PtMadePerGame"] as? Double,
             fg3PtPct: fg3PtPct,
             ftAtt: ftAtt,
+            ftAttPerGame: ft["ftAttPerGame"] as? Double,
             ftMade: ftMade,
+            ftMadePerGame: ft["ftMadePerGame"] as? Double,
             ftPct: ftPct,
             offReb: offReb,
+            offRebPerGame: rb["offRebPerGame"] as? Double,
             defReb: defReb,
+            defRebPerGame: rb["defRebPerGame"] as? Double,
             reb: reb,
+            rebPerGame: rb["rebPerGame"] as? Double,
             ast: ast,
+            astPerGame: off["astPerGame"] as? Double,
             pts: pts,
+            ptsPerGame: off["ptsPerGame"] as? Double,
             tov: tov,
+            tovPerGame: def["tovPerGame"] as? Double,
             stl: stl,
+            stlPerGame: def["stlPerGame"] as? Double,
             blk: blk,
+            blkPerGame: def["blkPerGame"] as? Double,
             blkAgainst: blkAgainst,
-            ptsAgainst: def["ptsAgainst"],
+            blkAgainstPerGame: def["blkAgainstPerGame"] as? Double,
+            ptsAgainst: def["ptsAgainst"] as? Int,
+            ptsAgainstPerGame: def["ptsAgainstPerGame"] as? Double,
             fouls: fouls,
+            foulsPerGame: misc["foulsPerGame"] as? Double,
             foulsDrawn: foulsDrawn,
+            foulsDrawnPerGame: misc["foulsDrawnPerGame"] as? Double,
+            foulPers: misc["foulPers"] as? Int,
+            foulPersPerGame: misc["foulPersPerGame"] as? Double,
+            foulTech: misc["foulTech"] as? Int,
+            foulTechPerGame: misc["foulTechPerGame"] as? Double,
+            foulTechDrawn: misc["foulTechDrawn"] as? Int,
+            foulTechDrawnPerGame: misc["foulTechDrawnPerGame"] as? Double,
             ejections: ejections,
             plusMinus: plusMinus,
-            minSeconds: misc["minSeconds"],
-            gamesStarted: misc["gamesStarted"]
+            plusMinusPerGame: misc["plusMinusPerGame"] as? Double,
+            minSeconds: misc["minSeconds"] as? Int,
+            gamesStarted: misc["gamesStarted"] as? Int
         )
     }
 }
@@ -209,6 +278,71 @@ struct PlayerStats {
             position: position,
             jerseyNumber: jerseyNumber,
             gameStats: GameStats.create(fromJson: playerStats)
+        )
+    }
+}
+
+enum Conference: String {
+    case west = "Western"
+    case east = "Eastern"
+}
+
+struct TeamStats {
+    let team: Team
+    let stats: GameStats?
+    let gamesPlayed: Int
+    let wins: Int
+    let losses: Int
+    let winPct: Double
+    let overallRank: Int
+    let overallGamesBack: Double
+    let conference: Conference
+    let conferenceRank: Int
+    let conferenceGamesBack: Double
+    let inPlayoffs: Bool
+    
+    static func createMany(fromJson json: [String: Any]?) -> [TeamStats] {
+        guard let json = json,
+            let teamsJson = json["teams"] as? [[String: Any]]
+            else { return [] }
+        return teamsJson.compactMap { create(fromJson: $0) }
+    }
+    
+    static func create(fromJson json: [String: Any]?) -> TeamStats? {
+        guard let teamInfo = json?["team"] as? [String: Any],
+            let stats = json?["stats"] as? [String: Any],
+            let overallInfo = json?["overallRank"] as? [String: Any],
+            let conferenceInfo = json?["conferenceRank"] as? [String: Any],
+            let teamAbbreviation = teamInfo["abbreviation"] as? String,
+            let team = Constants.Teams(rawValue: teamAbbreviation)?.team,
+            let gamesPlayed = stats["gamesPlayed"] as? Int,
+            let overallRank = overallInfo["rank"] as? Int,
+            let overallGamesBack = overallInfo["gamesBack"] as? Double,
+            let standings = stats["standings"] as? [String: Any],
+            let wins = standings["wins"] as? Int,
+            let losses = standings["losses"] as? Int,
+            let winPct = standings["winPct"] as? Double,
+            let conferenceString = conferenceInfo["conferenceName"] as? String,
+            let conference = Conference(rawValue: conferenceString),
+            let conferenceRank = conferenceInfo["rank"] as? Int,
+            let conferenceGamesBack = conferenceInfo["gamesBack"] as? Double,
+            let playoffsInfo = json?["playoffRank"] as? [String: Any],
+            let playoffsRank = playoffsInfo["rank"] as? Int
+            else { return nil }
+        
+        return TeamStats(
+            team: team,
+            stats: GameStats.create(fromJson: stats),
+            gamesPlayed: gamesPlayed,
+            wins: wins,
+            losses: losses,
+            winPct: winPct,
+            overallRank: overallRank,
+            overallGamesBack: overallGamesBack,
+            conference: conference,
+            conferenceRank: conferenceRank,
+            conferenceGamesBack: conferenceGamesBack,
+            inPlayoffs: playoffsRank <= 8
         )
     }
 }

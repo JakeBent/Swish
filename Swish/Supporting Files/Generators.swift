@@ -6,7 +6,17 @@ enum FontWeight {
 
 struct Generators {
     
-    static func makeLabel(fontSize: CGFloat = 14, align: NSTextAlignment = .left, weight: FontWeight = .normal, numberOfLines: Int = 1, color: UIColor = .black, text: String? = nil, bgColor: UIColor = .clear) -> UILabel {
+    static func makeLabel(
+        fontSize: CGFloat = 14,
+        align: NSTextAlignment = .left,
+        weight: FontWeight = .normal,
+        numberOfLines: Int = 1,
+        color: UIColor = .black,
+        text: String? = nil,
+        bgColor: UIColor = .clear,
+        shrinkFont: Bool = false
+    ) -> UILabel {
+
         let label = UILabel()
         
         label.textAlignment = align
@@ -15,6 +25,7 @@ struct Generators {
         label.textColor = color
         label.text = text
         label.backgroundColor = bgColor
+        label.adjustsFontSizeToFitWidth = shrinkFont
         
         switch weight {
         case .normal:
@@ -44,7 +55,7 @@ struct Generators {
     static func makeIconButton(image: UIImage, color: UIColor = .black, rotation: CGFloat = 0) -> UIButton {
         let button = UIButton()
         
-        button.imageView?.contentMode = .scaleAspectFill
+        button.imageView?.contentMode = .scaleAspectFit
         button.setImage(image.withRenderingMode(.alwaysTemplate), for: .normal)
         button.tintColor = color
         button.transform = CGAffineTransform(rotationAngle: rotation)
@@ -64,5 +75,41 @@ struct Generators {
         stack.translatesAutoresizingMaskIntoConstraints = false
         
         return stack
+    }
+    
+    static func makeView(bgColor: UIColor = .bg) -> UIView {
+        let view = UIView()
+        
+        view.backgroundColor = bgColor
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+    }
+    
+    static func makeScrollView(paging: Bool = false, vBounce: Bool = false, hBounce: Bool = false) -> UIScrollView {
+        let scrollView = UIScrollView()
+        
+        scrollView.isPagingEnabled = paging
+        scrollView.alwaysBounceVertical = vBounce
+        scrollView.alwaysBounceHorizontal = hBounce
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return scrollView
+    }
+    
+    static func makeSpacer() -> UIView {
+        let view = makeView()
+        let bar = makeView(bgColor: .altBg)
+        view.addSubview(bar)
+        bar.pinHeight(toConstant: 2)
+        bar.pinToEdges(
+            of: view,
+            topOffset: 8,
+            leftOffset: 48,
+            bottomOffset: -8,
+            rightOffset: -48
+        )
+        return view
     }
 }

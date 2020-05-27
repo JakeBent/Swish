@@ -29,6 +29,9 @@ class NBAService: NSObject {
         static func gameBoxscore(id: Int) -> String {
             return "\(Constants.urls.nbaApi)/\(currentSeason)/games/\(id)/boxscore.json"
         }
+        static func standings() -> String {
+            return "\(Constants.urls.nbaApi)/\(currentSeason)/standings.json"
+        }
     }
     
     struct Headers {
@@ -79,6 +82,7 @@ class NBAService: NSObject {
     
     func getBoxscore(id: Int, progress: ((Double) -> Void)? = nil, done: @escaping (Error?, Boxscore?) -> Void) {
         let utilityQueue = DispatchQueue.global(qos: .utility)
+
         request(
             Endpoints.gameBoxscore(id: id),
             headers: Headers.auth
@@ -95,6 +99,29 @@ class NBAService: NSObject {
                         
             let boxScore = Boxscore.create(fromJson: json)
             done(nil, boxScore)
+        }
+    }
+    
+    func getStandings(progress: ((Double) -> Void)? = nil, done: @escaping (Error?, [TeamStats]) -> Void) {
+        
+        let utilityQueue = DispatchQueue.global(qos: .utility)
+        
+        request(
+            Endpoints.standings(),
+            headers: Headers.auth
+        ).downloadProgress(queue: utilityQueue) { info in
+            progress?(info.fractionCompleted)
+        }
+        .responseJSON { response in
+            guard let json = response.value as? [String: Any],
+                response.error == nil
+            else {
+                done(response.error ?? Errors.badData, [])
+                return
+            }
+            
+            let teamStats = TeamStats.createMany(fromJson: json)
+            done(nil, teamStats)
         }
     }
 }

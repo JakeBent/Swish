@@ -3,8 +3,7 @@ import UIKit
 struct Constants {
     static let urls = Urls()
     static let keys = Keys()
-    static let logos = Logos()
-    
+
     struct Urls {
         let firebase = "https://nba-app-ca681.firebaseio.com"
         let nbaApi = "https://api.mysportsfeeds.com/v2.1/pull/nba"
@@ -12,10 +11,6 @@ struct Constants {
 
     struct Keys {
         let nbaApi = "OTRhNTAzODUtYmY4NS00NzFjLWEwOWMtMGFlY2EwOk1ZU1BPUlRTRkVFRFM="
-    }
-
-    struct Logos {
-        let hawks = #imageLiteral(resourceName: "hawks_logo")
     }
 
     enum Teams: String {
@@ -59,7 +54,12 @@ struct Constants {
                     abbreviation: "TOR",
                     homeVenueId: 1,
                     homeVenueName: "Scotiabank Arena",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0xce1141, alpha: 1),
+                        .black,
+                        UIColor(rgb: 0xa1a1a4, alpha: 1),
+                        UIColor(rgb: 0xb4975a, alpha: 1),
+                    ],
                     twitter: "raptors",
                     logo: #imageLiteral(resourceName: "TOR_logo")
                 )
@@ -70,7 +70,13 @@ struct Constants {
                     abbreviation: "BOS",
                     homeVenueId: 27,
                     homeVenueName: "TD Garden",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x007a33, alpha: 1),
+                        UIColor(rgb: 0xba9653, alpha: 1),
+                        UIColor(rgb: 0x963821, alpha: 1),
+                        UIColor(rgb: 0xe596d, alpha: 1),
+                        UIColor(rgb: 0x000000, alpha: 1),
+                    ],
                     twitter: "celtics",
                     logo: #imageLiteral(resourceName: "BOS_logo")
                 )
@@ -81,7 +87,12 @@ struct Constants {
                     abbreviation: "NYK",
                     homeVenueId: 12,
                     homeVenueName: "Madison Square Garden",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x006bb6, alpha: 1),
+                        UIColor(rgb: 0xf58426, alpha: 1),
+                        UIColor(rgb: 0xbec0c2, alpha: 1),
+                        UIColor(rgb: 0x000000, alpha: 1),
+                    ],
                     twitter: "nyknicks",
                     logo: #imageLiteral(resourceName: "NYK_logo")
                 )
@@ -92,7 +103,10 @@ struct Constants {
                     abbreviation: "BRO",
                     homeVenueId: 78,
                     homeVenueName: "Barclays Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x000000, alpha: 1),
+                        UIColor(rgb: 0xffffff, alpha: 1),
+                    ],
                     twitter: "brooklynnets",
                     logo: #imageLiteral(resourceName: "BKN_logo")
                 )
@@ -103,7 +117,12 @@ struct Constants {
                     abbreviation: "PHI",
                     homeVenueId: 29,
                     homeVenueName: "Wells Fargo Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x006bb6, alpha: 1),
+                        UIColor(rgb: 0xed174c, alpha: 1),
+                        UIColor(rgb: 0x002b5c, alpha: 1),
+                        UIColor(rgb: 0xc4ced4, alpha: 1),
+                    ],
                     twitter: "sixers",
                     logo: #imageLiteral(resourceName: "PHI_logo")
                 )
@@ -114,7 +133,12 @@ struct Constants {
                     abbreviation: "CLE",
                     homeVenueId: 80,
                     homeVenueName: "Rocket Mortgage FieldHouse",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x6f263d, alpha: 1),
+                        UIColor(rgb: 0x041e42, alpha: 1),
+                        UIColor(rgb: 0xffb81c, alpha: 1),
+                        UIColor(rgb: 0x000000, alpha: 1),
+                    ],
                     twitter: "cavs",
                     logo: #imageLiteral(resourceName: "CLE_logo")
                 )
@@ -125,7 +149,11 @@ struct Constants {
                     abbreviation: "IND",
                     homeVenueId: 81,
                     homeVenueName: "Bankers Life Fieldhouse",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x002d62, alpha: 1),
+                        UIColor(rgb: 0xfdbb30, alpha: 1),
+                        UIColor(rgb: 0xbec0c2, alpha: 1),
+                    ],
                     twitter: "pacers",
                     logo: #imageLiteral(resourceName: "IND_logo")
                 )
@@ -136,7 +164,12 @@ struct Constants {
                     abbreviation: "DET",
                     homeVenueId: 145,
                     homeVenueName: "Little Caesars Arena",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x006bb6, alpha: 1),
+                        UIColor(rgb: 0x006bb6, alpha: 1),
+                        UIColor(rgb: 0xbec0c2, alpha: 1),
+                        UIColor(rgb: 0x002d62, alpha: 1),
+                    ],
                     twitter: "detroitpistons",
                     logo: #imageLiteral(resourceName: "DET_logo")
                 )
@@ -147,7 +180,10 @@ struct Constants {
                     abbreviation: "CHI",
                     homeVenueId: 28,
                     homeVenueName: "United Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0xce1141, alpha: 1),
+                        UIColor(rgb: 0x000000, alpha: 1),
+                    ],
                     twitter: "chicagobulls",
                     logo: #imageLiteral(resourceName: "CHI_logo")
                 )
@@ -158,7 +194,10 @@ struct Constants {
                     abbreviation: "MIL",
                     homeVenueId: 152,
                     homeVenueName: "Fiserv Forum",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x00471b, alpha: 1),
+                        UIColor(rgb: 0xeee1c6, alpha: 1),
+                    ],
                     twitter: "bucks",
                     logo: #imageLiteral(resourceName: "MIL_logo")
                 )
@@ -169,7 +208,10 @@ struct Constants {
                     abbreviation: "ATL",
                     homeVenueId: 20,
                     homeVenueName: "State Farm Arena",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0xe03a3e, alpha: 1),
+                        UIColor(rgb: 0xc1d32f, alpha: 1),
+                    ],
                     twitter: "atlhawks",
                     logo: #imageLiteral(resourceName: "ATL_logo")
                 )
@@ -180,7 +222,10 @@ struct Constants {
                     abbreviation: "MIA",
                     homeVenueId: 86,
                     homeVenueName: "American Airlines Arena",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x98002e, alpha: 1),
+                        UIColor(rgb: 0xf9a01b, alpha: 1),
+                    ],
                     twitter: "miamiheat",
                     logo: #imageLiteral(resourceName: "MIA_logo")
                 )
@@ -191,7 +236,10 @@ struct Constants {
                     abbreviation: "CHA",
                     homeVenueId: 87,
                     homeVenueName: "Spectrum Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x1d1160, alpha: 1),
+                        UIColor(rgb: 0x00788c, alpha: 1),
+                    ],
                     twitter: "hornets",
                     logo: #imageLiteral(resourceName: "CHA_logo")
                 )
@@ -202,7 +250,10 @@ struct Constants {
                     abbreviation: "WAS",
                     homeVenueId: 13,
                     homeVenueName: "Capital One Arena",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x002b5c, alpha: 1),
+                        UIColor(rgb: 0xe31837, alpha: 1),
+                    ],
                     twitter: "washwizards",
                     logo: #imageLiteral(resourceName: "WAS_logo")
                 )
@@ -213,7 +264,10 @@ struct Constants {
                     abbreviation: "ORL",
                     homeVenueId: 89,
                     homeVenueName: "Amway Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x0077c0, alpha: 1),
+                        UIColor(rgb: 0xc4ced4, alpha: 1),
+                    ],
                     twitter: "orlandomagic",
                     logo: #imageLiteral(resourceName: "ORL_logo")
                 )
@@ -224,7 +278,10 @@ struct Constants {
                     abbreviation: "OKL",
                     homeVenueId: 90,
                     homeVenueName: "Chesapeake Energy Arena",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x007ac1, alpha: 1),
+                        UIColor(rgb: 0xef3b24, alpha: 1),
+                    ],
                     twitter: "okcthunder",
                     logo: #imageLiteral(resourceName: "OKC_logo")
                 )
@@ -235,7 +292,10 @@ struct Constants {
                     abbreviation: "POR",
                     homeVenueId: 91,
                     homeVenueName: "Moda Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0xe03a3e, alpha: 1),
+                        UIColor(rgb: 0x000000, alpha: 1),
+                    ],
                     twitter: "trailblazers",
                     logo: #imageLiteral(resourceName: "POR_logo")
                 )
@@ -246,7 +306,10 @@ struct Constants {
                     abbreviation: "UTA",
                     homeVenueId: 92,
                     homeVenueName: "Vivant Smart Home Arena",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x002b5c, alpha: 1),
+                        UIColor(rgb: 0x00471b, alpha: 1),
+                    ],
                     twitter: "utahjazz",
                     logo: #imageLiteral(resourceName: "UTA_logo")
                 )
@@ -257,7 +320,10 @@ struct Constants {
                     abbreviation: "DEN",
                     homeVenueId: 19,
                     homeVenueName: "Pepsi Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x0e2240, alpha: 1),
+                        UIColor(rgb: 0xfec524, alpha: 1),
+                    ],
                     twitter: "nuggets",
                     logo: #imageLiteral(resourceName: "DEN_logo")
                 )
@@ -268,7 +334,10 @@ struct Constants {
                     abbreviation: "MIN",
                     homeVenueId: 94,
                     homeVenueName: "Target Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x0c2340, alpha: 1),
+                        UIColor(rgb: 0x236192, alpha: 1),
+                    ],
                     twitter: "timberwolves",
                     logo: #imageLiteral(resourceName: "MIN_logo")
                 )
@@ -279,7 +348,10 @@ struct Constants {
                     abbreviation: "GSW",
                     homeVenueId: 150,
                     homeVenueName: "Chase Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x006bb6, alpha: 1),
+                        UIColor(rgb: 0xfdb927, alpha: 1),
+                    ],
                     twitter: "warriors",
                     logo: #imageLiteral(resourceName: "GSW_logo")
                 )
@@ -290,7 +362,10 @@ struct Constants {
                     abbreviation: "LAC",
                     homeVenueId: 25,
                     homeVenueName: "Staples Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0xc8102e, alpha: 1),
+                        UIColor(rgb: 0x1d428a, alpha: 1),
+                    ],
                     twitter: "laclippers",
                     logo: #imageLiteral(resourceName: "LAC_logo")
                 )
@@ -301,7 +376,10 @@ struct Constants {
                     abbreviation: "SAC",
                     homeVenueId: 151,
                     homeVenueName: "Golden 1 Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x5a2d81, alpha: 1),
+                        UIColor(rgb: 0x63727a, alpha: 1),
+                    ],
                     twitter: "sacramentokings",
                     logo: #imageLiteral(resourceName: "SAC_logo")
                 )
@@ -312,7 +390,10 @@ struct Constants {
                     abbreviation: "PHX",
                     homeVenueId: 98,
                     homeVenueName: "Talking Stick Resort Arena",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x1d1160, alpha: 1),
+                        UIColor(rgb: 0xe56020, alpha: 1),
+                    ],
                     twitter: "suns",
                     logo: #imageLiteral(resourceName: "PHX_logo")
                 )
@@ -323,7 +404,10 @@ struct Constants {
                     abbreviation: "LAL",
                     homeVenueId: 25,
                     homeVenueName: "Staples Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x552583, alpha: 1),
+                        UIColor(rgb: 0xfdb927, alpha: 1),
+                    ],
                     twitter: "lakers",
                     logo: #imageLiteral(resourceName: "LAL_logo")
                 )
@@ -334,7 +418,10 @@ struct Constants {
                     abbreviation: "SAS",
                     homeVenueId: 99,
                     homeVenueName: "AT&T Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0xc4ced4, alpha: 1),
+                        UIColor(rgb: 0x000000, alpha: 1),
+                    ],
                     twitter: "spurs",
                     logo: #imageLiteral(resourceName: "SAS_logo")
                 )
@@ -345,7 +432,10 @@ struct Constants {
                     abbreviation: "MEM",
                     homeVenueId: 100,
                     homeVenueName: "Fedex Forum",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x5d76a9, alpha: 1),
+                        UIColor(rgb: 0x12173f, alpha: 1),
+                    ],
                     twitter: "memgrizz",
                     logo: #imageLiteral(resourceName: "MEM_logo")
                 )
@@ -356,7 +446,10 @@ struct Constants {
                     abbreviation: "DAL",
                     homeVenueId: 2,
                     homeVenueName: "American Airlines Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x00538c, alpha: 1),
+                        UIColor(rgb: 0x002b5e, alpha: 1),
+                    ],
                     twitter: "dallasmavs",
                     logo: #imageLiteral(resourceName: "DAL_logo")
                 )
@@ -367,7 +460,10 @@ struct Constants {
                     abbreviation: "HOU",
                     homeVenueId: 102,
                     homeVenueName: "Toyota Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0xce1141, alpha: 1),
+                        UIColor(rgb: 0x000000, alpha: 1),
+                    ],
                     twitter: "houstonrockets",
                     logo: #imageLiteral(resourceName: "HOU_logo")
                 )
@@ -378,7 +474,10 @@ struct Constants {
                     abbreviation: "NOP",
                     homeVenueId: 103,
                     homeVenueName: "Smoothie King Center",
-                    teamColors: [],
+                    teamColors: [
+                        UIColor(rgb: 0x0c2340, alpha: 1),
+                        UIColor(rgb: 0xc8102e, alpha: 1),
+                    ],
                     twitter: "pelicansnba",
                     logo: #imageLiteral(resourceName: "NOP_logo")
                 )

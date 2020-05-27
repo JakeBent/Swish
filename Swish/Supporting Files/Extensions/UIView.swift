@@ -1,4 +1,5 @@
 import UIKit
+import UICircularProgressRing
 
 extension UIView {
     func removeSubview(_ view: UIView?) {
@@ -55,6 +56,10 @@ extension UIView {
         centerYAnchor.constraint(equalTo: anchor, constant: constant).isActive = isActive
     }
     
+    func pinHeight(to constant: CGFloat, isActive: Bool = true) {
+        heightAnchor.constraint(equalToConstant: constant).isActive = isActive
+    }
+    
     func pinHeight(toConstant constant: CGFloat, isActive: Bool = true) {
         heightAnchor.constraint(equalToConstant: constant).isActive = isActive
     }
@@ -67,16 +72,20 @@ extension UIView {
         widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant).isActive = isActive
     }
     
+    func pinWidth(to constant: CGFloat, isActive: Bool = true) {
+        widthAnchor.constraint(equalToConstant: constant).isActive = isActive
+    }
+    
     func pinWidth(toConstant constant: CGFloat, isActive: Bool = true) {
         widthAnchor.constraint(equalToConstant: constant).isActive = isActive
     }
     
-    func pinWidth(greaterThan anchor: NSLayoutDimension, isActive: Bool = true) {
-        widthAnchor.constraint(greaterThanOrEqualTo: anchor).isActive = isActive
+    func pinWidth(greaterThan anchor: NSLayoutDimension, multiplier: CGFloat = 1, isActive: Bool = true) {
+        widthAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier).isActive = isActive
     }
     
-    func pinWidth(lessThan anchor: NSLayoutDimension, isActive: Bool = true) {
-        widthAnchor.constraint(lessThanOrEqualTo: anchor).isActive = isActive
+    func pinWidth(lessThan anchor: NSLayoutDimension, multiplier: CGFloat = 1, isActive: Bool = true) {
+        widthAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: multiplier).isActive = isActive
     }
     
     func pinWidth(lessThan constant: CGFloat, isActive: Bool = true) {
@@ -87,7 +96,7 @@ extension UIView {
         widthAnchor.constraint(greaterThanOrEqualToConstant: constant).isActive = isActive
     }
     
-    func addOutline(color: UIColor = .lightGray, thickness: CGFloat = 1) {
+    func addOutline(color: UIColor = .altBg, thickness: CGFloat = 1) {
         layer.borderWidth = thickness
         layer.borderColor = color.cgColor
     }
@@ -133,5 +142,70 @@ extension UIView {
         }
         
         layer.addSublayer(border)
+    }
+    
+    var loadingViewTag: Int { return 666 }
+    var progressBarTag: Int { return 667 }
+    var blurViewTag: Int { return 668 }
+    var progressBar: UICircularProgressRing {
+        let progressBar = UICircularProgressRing()
+        progressBar.tag = progressBarTag
+        progressBar.style = .bordered(width: 3, color: .main)
+        progressBar.innerRingColor = .main
+        progressBar.maxValue = 100
+        progressBar.translatesAutoresizingMaskIntoConstraints = false
+        return progressBar
+    }
+    var blurView : UIVisualEffectView {
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: .prominent))
+        view.tag = blurViewTag
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }
+    var loadingView: UIView {
+        let view = UIView()
+        view.backgroundColor = .clear
+        view.tag = loadingViewTag
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let blur = blurView
+        let bar = progressBar
+        [blur, bar].forEach { view.addSubview($0) }
+        blur.pinToEdges(of: view)
+        bar.pinCenterX(to: view.centerXAnchor)
+        bar.pinCenterY(to: view.centerYAnchor)
+        bar.pinHeight(toConstant: 100)
+        bar.pinWidth(to: bar.heightAnchor)
+        return view
+    }
+    
+    func setProgress(_ progress: Double) {
+        DispatchQueue.main.async { [weak self] in
+            if let sself = self,
+                let bar = sself.viewWithTag(sself.progressBarTag) as? UICircularProgressRing {
+                bar.startProgress(to: CGFloat(progress * 100), duration: 0.2)
+            }
+        }
+    }
+    
+    func setLoading(_ loading: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            if let sself = self {
+                if loading {
+                    let newLoadingView = sself.loadingView
+                    sself.insertSubview(newLoadingView, at: 999)
+                    newLoadingView.pinToEdges(of: sself)
+                    sself.layoutIfNeeded()
+                } else {
+                    let oldLoadingView = sself.viewWithTag(sself.loadingViewTag)
+                    let blur = sself.viewWithTag(sself.blurViewTag) as? UIVisualEffectView
+                    UIView.animate(withDuration: 0.3, animations: {
+                        blur?.effect = nil
+                        oldLoadingView?.alpha = 0
+                    }) { _ in
+                        oldLoadingView?.removeFromSuperview()
+                    }
+                }
+            }
+        }
     }
 }

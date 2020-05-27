@@ -25,7 +25,9 @@ class GamesDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDel
         self.parent = parent
         
         NBAService.shared.getSeasonGames(progress: { progress in
-            self.parent?.setProgress(progress)
+            DispatchQueue.main.async { [weak self] in
+                self?.parent?.view.setProgress(progress)
+            }
         }) { [weak self] err, games in
             var hasGamesToday = false
             let sortedKeys = Array(games.keys).sorted(by: <)

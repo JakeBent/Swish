@@ -20,6 +20,7 @@
 		9B2425301FA8683200833774 /* reddit_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B24252F1FA8677900833774 /* reddit_comments.json */; };
 		9B2425321FA8864200833774 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2425311FA8864200833774 /* CommentView.swift */; };
 		9B2425341FA89DF800833774 /* CommentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2425331FA89DF800833774 /* CommentContainer.swift */; };
+		9B24F4D823FB47570065E22A /* GameDetailScoringOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24F4D723FB47570065E22A /* GameDetailScoringOverview.swift */; };
 		9B31EC4D1F9F016A0079E653 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC4C1F9F016A0079E653 /* Game.swift */; };
 		9B31EC501F9F0B7C0079E653 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC4F1F9F0B7C0079E653 /* MainNavigationController.swift */; };
 		9B31EC551F9F2BF00079E653 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31EC541F9F2BF00079E653 /* GamesViewController.swift */; };
@@ -33,6 +34,8 @@
 		9B464AD623F611F500624398 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B464AD523F611F500624398 /* UIViewController.swift */; };
 		9B464AD823F6314C00624398 /* Boxscore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B464AD723F6314C00624398 /* Boxscore.swift */; };
 		9B464ADA23FA923D00624398 /* GameDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B464AD923FA923D00624398 /* GameDetailDataSource.swift */; };
+		9B82C8CB24182D3B009D74F7 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82C8CA24182D3B009D74F7 /* TeamsViewController.swift */; };
+		9B82C8CD241840A3009D74F7 /* ExpandingScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82C8CC241840A3009D74F7 /* ExpandingScrollCell.swift */; };
 		9B87F2E623F46BF500CB63CB /* NBAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B87F2E523F46BF500CB63CB /* NBAService.swift */; };
 		9B96C7B11F9F9FCD00DB11C2 /* Generators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7B01F9F9FCD00DB11C2 /* Generators.swift */; };
 		9B96C7B51F9FA8CE00DB11C2 /* GamesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7B41F9FA8CE00DB11C2 /* GamesDataSource.swift */; };
@@ -42,6 +45,7 @@
 		9B96C7BE1FA1CC1800DB11C2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7BD1FA1CC1800DB11C2 /* UIFont.swift */; };
 		9B96C7C11FA1D51600DB11C2 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7C01FA1D51600DB11C2 /* SegmentedControl.swift */; };
 		9B96C7C41FA3435A00DB11C2 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96C7C31FA3435A00DB11C2 /* StandingsViewController.swift */; };
+		9BACFE6623FB1BE40040D188 /* GameDetailTeamComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BACFE6523FB1BE40040D188 /* GameDetailTeamComparisonView.swift */; };
 		9BB1450C1FAA0AC8005585BD /* CommentContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1450B1FAA0AC8005585BD /* CommentContainerCell.swift */; };
 		9BBD83EA1F9E7A2200D1C729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBD83E91F9E7A2200D1C729 /* AppDelegate.swift */; };
 		9BBD83F11F9E7A2200D1C729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBD83F01F9E7A2200D1C729 /* Assets.xcassets */; };
@@ -81,6 +85,7 @@
 		9B24252F1FA8677900833774 /* reddit_comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reddit_comments.json; sourceTree = "<group>"; };
 		9B2425311FA8864200833774 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		9B2425331FA89DF800833774 /* CommentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentContainer.swift; sourceTree = "<group>"; };
+		9B24F4D723FB47570065E22A /* GameDetailScoringOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailScoringOverview.swift; sourceTree = "<group>"; };
 		9B31EC4C1F9F016A0079E653 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9B31EC4F1F9F0B7C0079E653 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		9B31EC541F9F2BF00079E653 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +99,8 @@
 		9B464AD523F611F500624398 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9B464AD723F6314C00624398 /* Boxscore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boxscore.swift; sourceTree = "<group>"; };
 		9B464AD923FA923D00624398 /* GameDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailDataSource.swift; sourceTree = "<group>"; };
+		9B82C8CA24182D3B009D74F7 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		9B82C8CC241840A3009D74F7 /* ExpandingScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingScrollCell.swift; sourceTree = "<group>"; };
 		9B87F2E523F46BF500CB63CB /* NBAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAService.swift; sourceTree = "<group>"; };
 		9B96C7B01F9F9FCD00DB11C2 /* Generators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generators.swift; sourceTree = "<group>"; };
 		9B96C7B41F9FA8CE00DB11C2 /* GamesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDataSource.swift; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 		9B96C7BD1FA1CC1800DB11C2 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		9B96C7C01FA1D51600DB11C2 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		9B96C7C31FA3435A00DB11C2 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
+		9BACFE6523FB1BE40040D188 /* GameDetailTeamComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailTeamComparisonView.swift; sourceTree = "<group>"; };
 		9BB1450B1FAA0AC8005585BD /* CommentContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentContainerCell.swift; sourceTree = "<group>"; };
 		9BBD83E61F9E7A2100D1C729 /* Swish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBD83E91F9E7A2200D1C729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 				9B31EC4F1F9F0B7C0079E653 /* MainNavigationController.swift */,
 				9B31EC531F9F2BEA0079E653 /* Games */,
 				9B96C7C21FA3434400DB11C2 /* Standings */,
+				9B82C8C924182D23009D74F7 /* Teams */,
 				9B96C7BF1FA1D4FA00DB11C2 /* Aux */,
 			);
 			path = Views;
@@ -210,12 +219,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9B82C8C924182D23009D74F7 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				9B82C8CA24182D3B009D74F7 /* TeamsViewController.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
 		9B96C7B61FA0A24C00DB11C2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
 				9B96C7B71FA0A24C00DB11C2 /* GameDetailViewController.swift */,
 				9B464AD923FA923D00624398 /* GameDetailDataSource.swift */,
 				9B96C7B91FA0A26300DB11C2 /* BoxScoreView.swift */,
+				9BACFE6523FB1BE40040D188 /* GameDetailTeamComparisonView.swift */,
+				9B24F4D723FB47570065E22A /* GameDetailScoringOverview.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -227,6 +246,7 @@
 				9B0DB74523F4DC5E0000DA32 /* CutoutTabHeaderCell.swift */,
 				9B2425281FA85B5A00833774 /* Reddit */,
 				9B96C7C01FA1D51600DB11C2 /* SegmentedControl.swift */,
+				9B82C8CC241840A3009D74F7 /* ExpandingScrollCell.swift */,
 			);
 			path = Aux;
 			sourceTree = "<group>";
@@ -490,12 +510,15 @@
 				9B31EC5E1F9F548C0079E653 /* GameCell.swift in Sources */,
 				9BBD83EA1F9E7A2200D1C729 /* AppDelegate.swift in Sources */,
 				9B31EC501F9F0B7C0079E653 /* MainNavigationController.swift in Sources */,
+				9BACFE6623FB1BE40040D188 /* GameDetailTeamComparisonView.swift in Sources */,
 				9B0DB74423F4DC570000DA32 /* CutoutTabHeader.swift in Sources */,
 				9B96C7C41FA3435A00DB11C2 /* StandingsViewController.swift in Sources */,
 				9B96C7BC1FA0A51600DB11C2 /* Utility.swift in Sources */,
 				9B31EC621F9F55660079E653 /* UICollectionView.swift in Sources */,
 				9B0DB74A23F4DC730000DA32 /* Numbers.swift in Sources */,
+				9B82C8CB24182D3B009D74F7 /* TeamsViewController.swift in Sources */,
 				9B96C7BE1FA1CC1800DB11C2 /* UIFont.swift in Sources */,
+				9B82C8CD241840A3009D74F7 /* ExpandingScrollCell.swift in Sources */,
 				9B31EC601F9F54C10079E653 /* GamesView.swift in Sources */,
 				9B24252E1FA8656800833774 /* RedditService.swift in Sources */,
 				9B31EC571F9F2CFB0079E653 /* MainTabsViewController.swift in Sources */,
@@ -514,6 +537,7 @@
 				9BB1450C1FAA0AC8005585BD /* CommentContainerCell.swift in Sources */,
 				9B2425341FA89DF800833774 /* CommentContainer.swift in Sources */,
 				9B464AD823F6314C00624398 /* Boxscore.swift in Sources */,
+				9B24F4D823FB47570065E22A /* GameDetailScoringOverview.swift in Sources */,
 				9B0DB74C23F4DC850000DA32 /* UIColor.swift in Sources */,
 				9B87F2E623F46BF500CB63CB /* NBAService.swift in Sources */,
 				9B0DB74823F4DC690000DA32 /* Layout.swift in Sources */,
